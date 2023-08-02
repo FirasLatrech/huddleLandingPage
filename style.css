@@ -1,0 +1,114 @@
+:root{
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+}
+body{
+  background-image: url(images/bg-desktop.svg);
+  background-color: var(--Violet);
+  margin: 3rem;
+  font-family: 'Poppins', sans-serif;
+
+
+}
+header{
+  margin-bottom: 3rem;
+}
+.mainContiner{
+  display: flex;
+  gap: 1rem;
+
+
+}
+.rightContiner{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  color: white;
+}
+.rightContiner h2 {
+  font-weight: 600;
+  font-size: calc( 1rem + 24px );
+}
+.rightContiner p{
+  opacity: 0.7;
+
+}
+
+
+.rightContiner button {
+  padding: 1rem;
+  border-radius: 20px;
+  width: 11rem;
+  border: none;
+  font-size: 1rem;
+  color: var(--Violet);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.rightContiner button:hover{
+background-color: var(--SoftMagenta);
+color: white;
+transition: 0.7s;
+}
+footer{
+  margin-bottom: 3rem;
+}
+.icons {
+  margin-top: 2rem;
+  position: absolute;
+  right: 3rem;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.icons svg {
+  width: 30px;
+  height: 30px;
+  border: 1px white solid;
+  border-radius: 50%;
+  padding: 7px;
+
+}
+
+.icons svg:hover {
+  transition: 0.5s;
+  border-color: var(--SoftMagenta);
+  fill: var(--SoftMagenta) !important; /* Change the fill color of the SVG path */
+}
+@media (max-width:960px) {
+  .mainContiner{
+    flex-direction: column;
+
+  }
+  .rightContiner{
+    align-items: center;
+  }
+  .icons{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 1px;
+  }
+  @media (max-width:747px) {
+    .leftContiner img{
+      width:30rem ;
+    }
+    
+  }
+  
+  @media (max-width:428px) {
+    .leftContiner img {
+      width: 20rem;
+      
+  }
+  
+  }
+  @media (max-width:360px) {
+    .leftContiner img {
+      width: 15rem;
+      
+  }
+    
+  }
+}
